@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <rect width="512" height="512" fill="#08080a"/>
-  <!-- Stylized Tortuga Gold Shell Crest -->
-  <polygon points="256,60 340,110 370,210 340,310 256,360 172,310 142,210 172,110" fill="none" stroke="#d5c3ab" stroke-width="16"/>
-  <polygon points="256,120 310,150 330,210 310,270 256,300 202,270 182,210 202,150" fill="none" stroke="#d5c3ab" stroke-width="12"/>
-  <circle cx="256" cy="210" r="32" fill="#d5c3ab"/>
+  <rect width="512" height="512" fill="#7f817c" rx="96"/>
+  <!-- Official Tortuga Estate Hexagonal Bridge / Shell Logo -->
+  <g fill="#222325">
+    <!-- Top Left Hexagon Block -->
+    <path d="M 175,180 L 220,155 L 260,180 L 260,230 L 220,255 L 175,230 Z"/>
+    <!-- Top Right Hexagon Block -->
+    <path d="M 268,180 L 308,155 L 353,180 L 353,230 L 308,255 L 268,230 Z"/>
+    <!-- Bottom Left House Block -->
+    <path d="M 130,265 L 175,240 L 215,265 L 215,335 L 130,335 Z"/>
+    <!-- Bottom Right House Block -->
+    <path d="M 313,265 L 353,240 L 398,265 L 398,335 L 313,335 Z"/>
+  </g>
 </svg>
