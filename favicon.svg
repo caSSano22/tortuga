@@ -1,14 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <rect width="512" height="512" fill="#7f817c" rx="96"/>
-  <!-- Official Tortuga Estate Hexagonal Bridge / Shell Logo -->
-  <g fill="#222325">
-    <!-- Top Left Hexagon Block -->
-    <path d="M 175,180 L 220,155 L 260,180 L 260,230 L 220,255 L 175,230 Z"/>
-    <!-- Top Right Hexagon Block -->
-    <path d="M 268,180 L 308,155 L 353,180 L 353,230 L 308,255 L 268,230 Z"/>
-    <!-- Bottom Left House Block -->
-    <path d="M 130,265 L 175,240 L 215,265 L 215,335 L 130,335 Z"/>
-    <!-- Bottom Right House Block -->
-    <path d="M 313,265 L 353,240 L 398,265 L 398,335 L 313,335 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Grey background matching official logo #80817c -->
+  <rect width="400" height="400" fill="#80817c"/>
+  
+  <g fill="#2a2b28">
+    <!-- Left Hexagon (flat-top) -->
+    <polygon points="
+      152,112
+      202,140
+      202,196
+      152,224
+      102,196
+      102,140
+    "/>
+    <!-- Right Hexagon (flat-top) -->
+    <polygon points="
+      248,112
+      298,140
+      298,196
+      248,224
+      198,196
+      198,140
+    "/>
+    <!-- Left House Block (trapezoid below left hex) -->
+    <polygon points="
+      96,222
+      208,222
+      220,290
+      84,290
+    "/>
+    <!-- Right House Block (trapezoid below right hex) -->
+    <polygon points="
+      192,222
+      304,222
+      316,290
+      180,290
+    "/>
   </g>
 </svg>
