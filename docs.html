@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documentation & Smart Contract Specs | Tortuga Estate</title>
+  <meta name="description" content="Developer SDK, REST API, and smart contract documentation for Robinhood Chain." />
+  <link rel="icon" type="image/x-icon" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body style="padding-top: 20px;">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-tortuga">
+    <a href="index.html" class="brand-logo-tortuga">
+      <img src="logo.png" alt="Tortuga logo" style="width: 32px; height: 32px; object-fit: contain;">
+      TORTUGA
+    </a>
+
+    <div class="desktop-nav-links" style="display: flex; align-items: center; gap: 32px;">
+      <nav class="nav-links-tortuga">
+        <a href="index.html#about" class="nav-link-tortuga">About</a>
+        <a href="index.html#tortugaos" class="nav-link-tortuga">TortugaOS</a>
+        <a href="how-it-works.html" class="nav-link-tortuga">How It Works</a>
+        <a href="roadmap.html" class="nav-link-tortuga">Roadmap</a>
+        <a href="properties.html" class="nav-link-tortuga">Properties</a>
+        <a href="compliance.html" class="nav-link-tortuga">Compliance</a>
+        <a href="https://x.com/tortuga_estate" target="_blank" class="nav-link-tortuga" style="color: var(--accent-gold);">𝕏 @tortuga_estate</a>
+      </nav>
+
+      <a href="properties.html" class="btn-tortuga-gold">Explore Pools ↗</a>
+    </div>
+  </header>
+
+  <div class="wrap-container" style="padding-top: 64px; padding-bottom: 120px;">
+    <div class="label-mono-gold">— DEVELOPER & INSTITUTIONAL DOCS</div>
+    
+    <h1 style="font-family: var(--font-sans); font-size: clamp(36px, 4.5vw, 56px); font-weight: 400; color: var(--text-white); margin-bottom: 16px;">
+      Smart Contract API & SDK Specs
+    </h1>
+    <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 720px; margin-bottom: 48px; line-height: 1.6;">
+      Integrate Tortuga RWA bond liquidity, yield distribution webhooks, and SPV ISIN data feeds on Robinhood Chain.
+    </p>
+
+    <div style="background: var(--bg-card); border: 1px solid var(--stroke); border-radius: 20px; padding: 32px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.85rem;">
+        <span style="color: var(--text-muted);">contracts/TortugaBondPool.sol</span>
+        <span style="color: var(--accent-gold);">Robinhood Chain Mainnet</span>
+      </div>
+
+      <pre style="background: #000000; border-radius: 12px; padding: 24px; color: #ffffff; font-family: var(--font-mono); font-size: 0.88rem; overflow-x: auto; line-height: 1.6;"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract TortugaRWABond is ERC20 {
+    string public isinCode;
+    address public spvTrustee;
+    uint256 public annualYieldBps; // 840 = 8.4%
+
+    constructor(string memory _isin, address _trustee) ERC20("Tortuga Bond", "tBOND") {
+        isinCode = _isin;
+        spvTrustee = _trustee;
+        annualYieldBps = 840;
+    }
+
+    function distributeRentalYield(uint256 totalUsdcAmount) external {
+        require(msg.sender == spvTrustee, "Only SPV Trustee");
+        // Automated continuous yield sweep to bondholder addresses
+    }
+}</code></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

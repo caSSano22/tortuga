@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tortuga Estate — Institutional-Grade Real World Assets On Blockchain</title>
+  <meta name="description" content="Tortuga tokenizes real estate into Swiss-regulated, ISIN-certified yield-bearing bonds on Robinhood Chain." />
+  <meta name="theme-color" content="#08080a" />
+  <link rel="icon" type="image/x-icon" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar-tortuga">
+    <a href="index.html" class="brand-logo-tortuga">
+      <img src="logo.png" alt="Tortuga logo" style="width: 32px; height: 32px; object-fit: contain;">
+      TORTUGA
+    </a>
+
+    <div class="desktop-nav-links" style="display: flex; align-items: center; gap: 32px;">
+      <nav class="nav-links-tortuga">
+        <a href="#about" class="nav-link-tortuga active">About</a>
+        <a href="#tortugaos" class="nav-link-tortuga">TortugaOS</a>
+        <a href="how-it-works.html" class="nav-link-tortuga">How It Works</a>
+        <a href="roadmap.html" class="nav-link-tortuga">Roadmap</a>
+        <a href="properties.html" class="nav-link-tortuga">Properties</a>
+        <a href="compliance.html" class="nav-link-tortuga">Compliance</a>
+        <a href="https://x.com/tortuga_estate" target="_blank" class="nav-link-tortuga" style="color: var(--accent-gold);">𝕏 @tortuga_estate</a>
+      </nav>
+
+      <a href="properties.html" class="btn-tortuga-gold">Explore Pools ↗</a>
+    </div>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="btn-hamburger-tortuga" onclick="toggleMobileMenuTortuga()" aria-label="Open menu">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobileMenuDrawerTortuga" class="mobile-menu-drawer-tortuga">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand-logo-tortuga">
+        <img src="logo.png" alt="Tortuga logo" style="width: 32px; height: 32px; object-fit: contain;">
+        TORTUGA
+      </a>
+      <button style="background: transparent; border: none; font-size: 2rem; color: var(--text-white);" onclick="toggleMobileMenuTortuga()">&times;</button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 24px; font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; margin-top: 40px; text-transform: uppercase;">
+      <a href="#about" style="color: var(--text-white);" onclick="toggleMobileMenuTortuga()">About</a>
+      <a href="#tortugaos" style="color: var(--text-muted);" onclick="toggleMobileMenuTortuga()">TortugaOS</a>
+      <a href="how-it-works.html" style="color: var(--text-muted);" onclick="toggleMobileMenuTortuga()">How It Works</a>
+      <a href="roadmap.html" style="color: var(--text-muted);" onclick="toggleMobileMenuTortuga()">Roadmap</a>
+      <a href="properties.html" style="color: var(--text-muted);" onclick="toggleMobileMenuTortuga()">Properties</a>
+      <a href="compliance.html" style="color: var(--text-muted);" onclick="toggleMobileMenuTortuga()">Compliance</a>
+      <a href="https://x.com/tortuga_estate" target="_blank" style="color: var(--accent-gold);" onclick="toggleMobileMenuTortuga()">𝕏 @tortuga_estate</a>
+    </div>
+
+    <div style="margin-top: auto;">
+      <a href="properties.html" class="btn-tortuga-gold" style="width: 100%; text-align: center;">Explore Pools ↗</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="about" class="hero-tortuga">
+    <div class="wrap-container">
+      <div class="hero-grid-tortuga">
+        
+        <!-- Left Hero Copy -->
+        <div>
+          <div class="label-mono-gold">• INSTITUTIONAL RWA ON ROBINHOOD CHAIN</div>
+          
+          <h1 class="hero-h1-tortuga">
+            Institutional-Grade Real World Assets On Blockchain.
+          </h1>
+
+          <p class="hero-subtitle-tortuga">
+            Tortuga tokenizes prime global real estate as Swiss-regulated, ISIN-certified, yield-bearing bonds with sub-second settlement on Robinhood Chain.
+          </p>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 48px; flex-wrap: wrap;">
+            <a href="#tortugaos" class="btn-tortuga-gold">Explore TortugaOS ↓</a>
+            <a href="roadmap.html" class="btn-tortuga-outline">View Roadmap →</a>
+          </div>
+
+          <!-- Bottom Hero Stats Row -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: 1px solid var(--stroke); padding-top: 24px;">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--accent-gold);">$250M+</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Target RWA Pipeline</div>
+            </div>
+
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--text-white);">8.4% APY</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Avg Rental Payout</div>
+            </div>
+
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--text-white);">ISIN REG</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Swiss Securities Compliance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive RWA Yield Calculator Widget -->
+        <div>
+          <div class="rwa-widget-card">
+            <div class="label-mono-gold">— RWA YIELD CALCULATOR</div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Investment Capital</span>
+                <span id="txtInvestAmount" style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--accent-gold);">$50,000</span>
+              </div>
+
+              <input type="range" id="rwaInvestSlider" min="10000" max="500000" step="5000" value="50000" style="width: 100%; accent-color: var(--accent-gold); cursor: pointer;" />
+            </div>
+
+            <!-- Yield Output Box -->
+            <div style="background: rgba(0,0,0,0.6); border: 1px solid var(--stroke-gold); border-radius: 16px; padding: 20px; margin-bottom: 24px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-subtle); text-transform: uppercase;">ESTIMATED ANNUAL YIELD</div>
+                  <div id="txtYieldYear" style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--text-white);">$4,200</div>
+                </div>
+
+                <div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-subtle); text-transform: uppercase;">MONTHLY PAYOUT</div>
+                  <div id="txtYieldMonth" style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--accent-gold);">$350</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-tortuga-gold" style="width: 100%;" onclick="showTortugaToast('⚡ Simulated $50,000 RWA Pool Allocation on Robinhood Chain!')">
+              Simulate RWA Bond Allocation →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TORTUGAOS SHOWCASE SECTION -->
+  <section id="tortugaos" style="padding: 100px 0; border-bottom: 1px solid var(--stroke);">
+    <div class="wrap-container">
+      <div class="label-mono-gold">— AI OPERATING SYSTEM</div>
+
+      <h2 style="font-family: var(--font-sans); font-size: clamp(32px, 4vw, 52px); font-weight: 400; color: var(--text-white); margin-bottom: 24px; max-width: 800px; line-height: 1.15;">
+        One operating system for every Tortuga tokenized estate.
+      </h2>
+
+      <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 720px; margin-bottom: 48px; line-height: 1.6;">
+        Tortuga directly operates property SPVs and fully controls how TortugaOS manages tenancy telemetry, automated rent collection, and instant secondary bond liquidity.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--stroke); border-radius: 20px; padding: 32px;">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">01 • TELEMETRY</div>
+          <h3 style="font-size: 1.35rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Proprietary Data Moat</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Each estate generates real-time telemetry used to fine-tune AI occupancy forecasting models.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--stroke); border-radius: 20px; padding: 32px;">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">02 • AUTOMATION</div>
+          <h3 style="font-size: 1.35rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Automated Yield Sweeps</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Rental revenues are automatically converted into USDC / USD-R and distributed directly to bondholder wallets.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--stroke); border-radius: 20px; padding: 32px;">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">03 • REGULATION</div>
+          <h3 style="font-size: 1.35rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Swiss DLT Legal Framework</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Compliant under Swiss DLT laws with ISIN securities registration for institutional access.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION (SUMMARY STEPPER) -->
+  <section style="padding: 100px 0; border-bottom: 1px solid var(--stroke);">
+    <div class="wrap-container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <div class="label-mono-gold">— ARCHITECTURE & EXECUTION</div>
+          <h2 style="font-family: var(--font-sans); font-size: clamp(30px, 3.8vw, 48px); font-weight: 400; color: var(--text-white);">
+            How Tortuga Real Estate Tokenization Works
+          </h2>
+        </div>
+        <a href="how-it-works.html" class="btn-tortuga-outline">Full Architecture Specs →</a>
+      </div>
+
+      <div class="how-it-works-stepper">
+        <div class="step-card-tortuga">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">STEP 01</div>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Property Acquisition</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Prime prime commercial & residential real estate acquired into Swiss SPV structures.</p>
+        </div>
+
+        <div class="step-card-tortuga">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">STEP 02</div>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">TortugaOS Integration</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">AI operating system handles tenant leasing, operational efficiency, and maintenance.</p>
+        </div>
+
+        <div class="step-card-tortuga">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">STEP 03</div>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">ISIN Bond Tokenization</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Issued as certified yield-bearing bonds with Robinhood Chain smart contract verification.</p>
+        </div>
+
+        <div class="step-card-tortuga">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 12px;">STEP 04</div>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Sub-Second Payouts</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Rental yield settled in USDC/USD-R continuously to investor wallets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP SECTION (SUMMARY TIMELINE) -->
+  <section style="padding: 100px 0; border-bottom: 1px solid var(--stroke);">
+    <div class="wrap-container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <div class="label-mono-gold">— TIMELINE & MILESTONES</div>
+          <h2 style="font-family: var(--font-sans); font-size: clamp(30px, 3.8vw, 48px); font-weight: 400; color: var(--text-white);">
+            Tortuga Execution Roadmap
+          </h2>
+        </div>
+        <a href="roadmap.html" class="btn-tortuga-outline">Interactive Roadmap →</a>
+      </div>
+
+      <div class="roadmap-timeline-grid">
+        <div class="phase-card-tortuga active" data-phase="1">
+          <span class="phase-badge">Q1 2026 • COMPLETED</span>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Phase 1: RWA Core</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Swiss SPV legal architecture, ISIN registration engine, smart contract audit.</p>
+        </div>
+
+        <div class="phase-card-tortuga" data-phase="2">
+          <span class="phase-badge">Q2 2026 • IN PROGRESS</span>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Phase 2: TortugaOS Alpha</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">AI property management telemetry release, initial $25M pilot estate onboarding.</p>
+        </div>
+
+        <div class="phase-card-tortuga" data-phase="3">
+          <span class="phase-badge">Q3 2026 • UPCOMING</span>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Phase 3: Robinhood Mainnet</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Robinhood Chain liquidity pools launch, secondary bond trading marketplace.</p>
+        </div>
+
+        <div class="phase-card-tortuga" data-phase="4">
+          <span class="phase-badge">Q4 2026+ • FUTURE</span>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-white); margin-bottom: 8px;">Phase 4: Global Scaling</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Autonomous multi-jurisdiction estate acquisitions and institutional credit lines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-tortuga">
+    <div class="wrap-container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="brand-logo-tortuga" style="margin-bottom: 16px;">
+            <img src="logo.png" alt="Tortuga logo" style="width: 32px; height: 32px; object-fit: contain;">
+            TORTUGA
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-subtle); max-width: 320px; line-height: 1.6;">
+            Institutional-Grade Real World Assets On Blockchain.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-subtle); text-transform: uppercase; margin-bottom: 16px;">Architecture</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <a href="#tortugaos">TortugaOS</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="roadmap.html">Roadmap</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-subtle); text-transform: uppercase; margin-bottom: 16px;">Ecosystem</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <a href="properties.html">Properties</a>
+            <a href="compliance.html">Compliance</a>
+            <a href="https://x.com/tortuga_estate" target="_blank">𝕏 @tortuga_estate ↗</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-subtle); text-transform: uppercase; margin-bottom: 16px;">Legal</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <a href="compliance.html">Swiss DLT Framework</a>
+            <a href="docs.html">ISIN Registry Docs</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding-top: 32px; border-top: 1px solid var(--stroke); display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-subtle);">
+        <span>&copy; 2026 Tortuga Estate Inc. All rights reserved.</span>
+        <span>Built for Robinhood Chain Ecosystem</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
